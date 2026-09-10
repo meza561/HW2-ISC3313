@@ -4,8 +4,10 @@ using namespace std;
 int main() {
     int user_input;
     int counter = 0;
+    // set it to user input to avoid bug if user enters 0
+    int max_value = user_input;
 //gets user input
-    cout << "Enter a positive integer: " << endl;
+    cout << "Enter a positive integer: ";
     cin >> user_input;
     cout << user_input << " ";
     //stops when it hits 1
@@ -18,11 +20,14 @@ int main() {
         else
             user_input = user_input * 3 + 1;
 
+        if (user_input > max_value)
+            max_value=user_input;
         cout << user_input << " ";
         // adds a count for each operation
         counter ++ ;
     }
     cout << "\n Total shopping time: " << counter << endl;
+    cout << " Max value reached: " <<max_value << endl;
     cout << endl;
     return 0;
 }
