@@ -2,12 +2,14 @@
 using namespace std;
 // main function
 int main() {
-    int num1, num2, tempnum, count;
+    int og1, num1, og2, num2, tempnum, count;
     count = 0;
     cout << "Enter a positive integer: ";
-    cin >> num1;
+    cin >> og1;
+    num1 = og1;
     cout << "Enter another positive integer: ";
-    cin >> num2;
+    cin >> og2;
+    num2 = og2;
     if (num2 > num1) {
     tempnum = num1;
     num1 = num2;
@@ -19,6 +21,6 @@ int main() {
         num2 = rem;
         count ++;
     }
-    cout << "GCD is: " << num1 << endl;
+    cout << "gcd(" << og1 << "," << og2 << ") = " << num1 << endl;
     cout << "Number of iterations: " << count << endl;
 }
